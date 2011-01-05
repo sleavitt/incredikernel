@@ -1,0 +1,33 @@
+This is a fork of the incredikernel kernel for the Droid Incredible by Chad0989.
+
+Please note that the incredikernel is a Sense kernel, as that's what I'm running
+on my Droid Incredible, though since this change was taken from invisiblek's AOSP
+kernel, it should be applicable to either Sense or AOSP.
+
+It contains the Trickle Charging modifications made by ms79723 to htc_battery.c.
+
+I have diffed those changes back to the original htc_battery.c in the kernel source
+released by HTC (incrediblec-MR3-2.6.32-g9a2fc16). Diff was achieved by using
+"diff -NuBw" to ignore the changes in whitespace introduced by ms79723 by copy
+and pasting from gedit. The diff should be a lot more readable so it is possible to
+determine what was actually changed.
+
+I will NOT be releasing ANY pre-built kernels based on this source. You are more
+than welcome to check-out and/or fork this code and build your own kernels. The
+reason for this is simple; it is questionable whether this mod is a good idea given
+that the battery in a Droid Incredible is a Lithium Ion battery, and those type of
+batteries do not care for extremes; trickle charging the battery to full capacity is
+generally considered to be one of those extremes. If you choose to build a kernel from
+this source, you are assuming all responsibility for any damage this causes to your phone
+and/or battery. I assume absolutely no responsibility for anything that happens
+to your phone and related hardware by building and using a kernel from this source.
+I am sharing this repository due to a lack of a Sense kernel containing this modification,
+and I am genuinely curious as to what changes have been made. I am not running a
+kernel built from this source as of the writing of this README, so I cannot provide any
+feedback with regard to the effectiveness of the patch, though that may (or may not)
+change in the future.
+
+Issues derived from this kernel by any aspect of it EXCEPT the changes to htc_battery.c
+should be directed to Chad0989. Issues derived from the changes to htc_battery.c ONLY
+should be directed at ms79723, as he/she is the author of the changes; I simply cleaned
+them up for readability, and have no desire to maintain these changes going forward.
